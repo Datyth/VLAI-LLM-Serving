@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+src/llm_api/__init__.py
+src/llm_api/main.py
+src/llm_api/api/__init__.py
+src/llm_api/api/routes/__init__.py
+src/llm_api/api/routes/health.py
+src/llm_api/core/__init__.py
+src/llm_api/services/__init__.py
+src/llm_api/services/llm/__init__.py
+src/vlai_llm_serving.egg-info/PKG-INFO
+src/vlai_llm_serving.egg-info/SOURCES.txt
+src/vlai_llm_serving.egg-info/dependency_links.txt
+src/vlai_llm_serving.egg-info/requires.txt
+src/vlai_llm_serving.egg-info/top_level.txt
