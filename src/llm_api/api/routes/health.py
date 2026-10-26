@@ -6,10 +6,10 @@ from pydantic import BaseModel
 router = APIRouter(tags=["Health"])
 
 
-class HealthResponser(BaseModel):
+class HealthResponse(BaseModel):
     status: Literal["ok"]
 
 
-@router.get("/health", response_model=HealthResponser)
-async def health_check() -> HealthResponser:
-    return HealthResponser(status="ok")
+@router.get("/health", response_model=HealthResponse)
+async def health_check() -> HealthResponse:
+    return HealthResponse(status="ok")
