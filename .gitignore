@@ -1,7 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Development caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets
+.env
 .env.*
 !.env.example
 *.pem
 *.key
+
+# Model artifacts and datasets
 models/
 checkpoints/
 data/
+
+# Logs and temporary files
+*.log
+.DS_Store
