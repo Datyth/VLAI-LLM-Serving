@@ -33,4 +33,4 @@ data/
 *.log
 .DS_Store
 
-docs/
+# docs/
