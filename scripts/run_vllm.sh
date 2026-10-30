@@ -1,11 +1,18 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-sudo docker run --rm -it \
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+
+MODEL_CACHE="$PROJECT_ROOT/data/huggingface"
+mkdir -p "$MODEL_CACHE"
+
+docker run --rm -it \
   --name vlai-vllm \
   --gpus all \
   --shm-size=4g \
   -p 127.0.0.1:8000:8000 \
-  -v "$HOME/.cache/huggingface:/root/.cache/huggingface" \
+  -v "$MODEL_CACHE:/root/.cache/huggingface" \
   vllm/vllm-openai:v0.32.0 \
   RedHatAI/Qwen3.5-9B-FP8-dynamic \
   --served-model-name qwen3.5-9b \
